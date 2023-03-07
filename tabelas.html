@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabelas</title>
+        <style>
+            td, th{
+                border: solid 1px;
+                padding: 10px;
+            }
+            table{
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tabelas</h1>
+        <table>
+            <tr>
+                <th></th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+            </tr>
+            <tr>
+                <th>8:00-12:00</th>
+                <td>Aulas</td>
+                <td></td>
+                <td>Aulas</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <th>12:00-13:00</th>
+                <td colspan="5">Almoço</td>
+            </tr>
+            <tr>
+                <th>13:00-17:00</th>
+                <td>Pesquisa</td>
+                <td colspan="2">Aulas</td>
+                <td>Pesquisa</td>
+                <td>Orientação</td>
+            </tr>
+            <tr>
+                <th>17:00-18:00</th>
+                <td rowspan="2"></td>
+                <td>Jantar</td>
+                <td colspan="2" rowspan="2"></td>
+                <td>Jantar</td>
+            </tr>
+            <tr>
+                <th>18:00-22:00</th>
+                <td>Orientação</td>
+                <td>Aulas</td>
+            </tr>
+        </table>
+    </body>
+</html>
