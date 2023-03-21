@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">Página Bootstrap</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Início</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Sobre</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Comentário</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<header class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1>Bootstrap</h1>
+	    <p>Esta é uma página simples criada com o framework Bootstrap.</p>
+	  </div>
+	</header>
+
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-8">
+	      <h2>Sobre a Página</h2>
+	      <p>Sinceramente, o bootstrap é legal, mas existem vários detalhes de class que precisam ser buscados para fazer cada variação que quisermos. Isso dá um trabalho maior do que programar normal.</p>
+	    </div>
+	    <div class="col-sm-4">
+	      <h2>Comentário</h2>
+	      <p>Deixe seu comentário sobre o Bootstrap:</p>
+	      <form>
+	        <div class="form-group">
+	          <label for="nome">Nome:</label>
+	          <input type="text" class="form-control" id="nome">
+	        </div>
+	        <div class="form-group">
+	          <label for="email">E-mail:</label>
+	          <input type="email" class="form-control" id="email">
+	        </div>
+	        <div class="form-group">
+	          <label for="mensagem">Mensagem:</label>
+	          <textarea class="form-control" id="mensagem" rows="5"></textarea>
+	        </div>
+	        <button type="submit" class="btn btn-primary">Enviar</button>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+
+</body>
+</html>
