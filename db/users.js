@@ -1,25 +1,27 @@
 import { readFileSync, writeFileSync } from "fs"
-const usersfile = ".db/u"
-function getUsers(){
-    return JSON.parse(readFileSync(usersfile))
-}
+const usersfile = "./db/users.json"
 
-function getUser(email) {
-    const users = getUsers()
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].email == email) {
-            return users[i]
-        }
+import { executeQuery } from "./connect.js"
+
+async function getUser(email) {
+    const query = `SELECT * FROM users WHERE email = '${email}';`
+    const rows = await executeQuery(query)
+    if (rows.length > 0) {
+        return rows[0]
     }
+    return null
 }
 
-function saveUser(email, senha){
-    if(getUser(email)) return {sucess: false, msg: "usuário já existe"}
-    const users = getUsers()
-    const user = { "email": email, "senha": senha}
-    users.push(user)
-    writeFileSync(userfile, JSON.stringify(users, null, " "))
-    return {sucess: true, msg: "usuário cadastrado com sucesso"}
+async function insertUser(email, senha) {
+    const query = `INSERT INTO users (email, senha) VALUES ($1, $2)`
+    const values = [email, senha]
+    return await executeQuery(query, values)
 }
 
-export { getUsers, getUser, saveUser }
+async function saveUser(email, senha) {
+    const query = `UPDATE users SET senha = $2 WHERE email = $1`
+    const values = [email, senha]
+    return await executeQuery(query, values)
+}
+
+export { getUser, insertUser, saveUser }
